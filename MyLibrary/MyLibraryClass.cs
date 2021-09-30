@@ -4,6 +4,11 @@ namespace MyLibrary
 {
     public class MyLibraryClass
     {
+
+      public MyLibraryClass()
+      {
+      }
+
       public bool IsPrime(int candidate) 
       {
         if(candidate < 2)
@@ -19,6 +24,11 @@ namespace MyLibrary
           }
         }
         return true;
+      }
+
+      public bool IsEven(int candidate)
+      {
+        return candidate % 2 == 0;
       }
     }
 }
