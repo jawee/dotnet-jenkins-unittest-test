@@ -28,8 +28,7 @@ namespace MyLibrary
 
       public bool IsEven(int candidate)
       {
-        return false;
-        //return candidate % 2 == 0;
+        return candidate % 2 == 0;
       }
     }
 }

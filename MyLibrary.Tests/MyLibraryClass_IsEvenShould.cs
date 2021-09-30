@@ -43,5 +43,13 @@ namespace MyLibrary.Test
       Assert.True(result, $"{value} should be even");
     }
 
+    [Theory]
+    [InlineData(10)]
+    public void IsEven_Ten_ReturnTrue(int value)
+    {
+      var result = _myLibrary.IsEven(value);
+
+      Assert.True(result, $"{value} should be even");
+    }
   }
 }
