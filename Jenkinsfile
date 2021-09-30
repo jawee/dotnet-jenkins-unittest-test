@@ -16,6 +16,13 @@ pipeline {
     stage('Publish Coverage Report') {
       steps {
         cobertura(coberturaReportFile: '**/coverage.cobertura.xml')
+        xunit(
+          [MSTest(deleteOutputFiles: true,
+                  failIfNotNew: true,
+                  pattern: '**./*.trx',
+                  skipNoTestFiles: false,
+                  stopProcessingIfError: true)
+          ])
       }
     }
 
