@@ -3,11 +3,11 @@ using MyLibrary;
 
 namespace MyLibrary.Tests 
 {
-  public class MyLibraryTestClass
+  public class MyLibraryClass_IsPrimeShould
   {
     private readonly MyLibraryClass _myLibrary;
 
-    public MyLibraryTestClass()
+    public MyLibraryClass_IsPrimeShould()
     {
       _myLibrary = new MyLibraryClass();
     }
