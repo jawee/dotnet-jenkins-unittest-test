@@ -23,7 +23,7 @@ namespace MyLibrary.Tests
       Assert.False(result, $"{value} should not be prime");
     }
 
-    /*[Theory]
+    [Theory]
     [InlineData(2)]
     [InlineData(3)]
     [InlineData(5)]
@@ -45,6 +45,6 @@ namespace MyLibrary.Tests
       var result = _myLibrary.IsPrime(value);
 
       Assert.False(result, $"{value} should not be prime");
-    }*/
+    }
   }
 }
