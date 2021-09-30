@@ -20,7 +20,7 @@ namespace MyLibrary.Test
     {
       var result = _myLibrary.IsEven(value);
 
-      Assert.False(result, $"{value} isn't even");
+      Assert.False(result, $"{value} should not be even");
     }
 
     [Theory]
@@ -30,7 +30,17 @@ namespace MyLibrary.Test
     {
       var result = _myLibrary.IsEven(value);
 
-      Assert.True(result, $"{value} is even");
+      Assert.True(result, $"{value} should be even");
+    }
+
+    [Theory]
+    [InlineData(-2)]
+    [InlineData(-4)]
+    public void IsEven_Negative_ReturnTrue(int value)
+    {
+      var result = _myLibrary.IsEven(value);
+
+      Assert.True(result, $"{value} should be even");
     }
 
   }
