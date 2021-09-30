@@ -9,7 +9,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        dotnetTest(project: 'MyLibrary.Tests/MyLibrary.Tests.csproj')
+        dotnetTest(project: 'MyLibrary.Tests/MyLibrary.Tests.csproj', blame: true)
       }
     }
 
