@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Publish Coverage Report') {
+      steps {
+        cobertura(coberturaReportFile: '**/coverage.cobertura.xml')
+      }
+    }
+
   }
 }
