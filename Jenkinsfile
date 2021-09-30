@@ -19,7 +19,7 @@ pipeline {
         xunit(
           [MSTest(deleteOutputFiles: true,
                   failIfNotNew: true,
-                  pattern: '**./*.trx',
+                  pattern: './MyLibrary.Tests/TestResults/*.trx',
                   skipNoTestFiles: false,
                   stopProcessingIfError: true)
           ])
