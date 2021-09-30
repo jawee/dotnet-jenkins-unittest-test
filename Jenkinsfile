@@ -9,7 +9,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh 'dotnet test MyLibrary.Tests/MyLibrary.Tests.csproj'
+        sh 'dotnet test MyLibrary.Tests/MyLibrary.Tests.csproj --collect:"XPlat Code Coverage"'
       }
     }
 
